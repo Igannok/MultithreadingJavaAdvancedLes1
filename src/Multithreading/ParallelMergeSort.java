@@ -20,8 +20,9 @@ public class ParallelMergeSort {
                 " processors is " + (endTime - startTime) + " milliseconds");
 
         startTime = System.currentTimeMillis();
-        //MERGESORT UIT COMMENT ZETTEN INDIEN OPGELOST!!
-        //MergeSort.mergeSort(list2); // MergeSort is in Listing 24.5
+        MergeSort.mergeSort(list2); // MergeSort is in Listing 24.5
+        MergeSort mergeSort = new MergeSort();
+
         endTime = System.currentTimeMillis();
         System.out.println("\nSequential time is " +
                 (endTime - startTime) + " milliseconds");
@@ -61,9 +62,7 @@ public class ParallelMergeSort {
                         new SortTask(secondHalf));
 
                 // Merge firstHalf with secondHalf into list
-
-                //MERGESORT UIT COMMENT ZETTEN INDIEN OPGELOST!!
-                //MergeSort.merge(firstHalf, secondHalf, list);
+                MergeSort.merge(firstHalf, secondHalf, list);
             }
         }
     }
